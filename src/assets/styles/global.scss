@@ -26,6 +26,11 @@ a:active {
   text-decoration: none; /* 悬停时不加下划线 */
 }
 
+content {
+  position: fixed;
+  z-index: 0;
+}
+
 body {
   background-color: #f5f5f5;
   height: 100vh;
@@ -47,11 +52,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-}
-
-.logo img {
-  width: 40px;
-  margin-bottom: 20px;
+  z-index: 1;
 }
 
 .layout {
@@ -142,18 +143,38 @@ body {
   color: #7c4dff;
 }
 
+/* slide-in 动画 */
+@keyframes slide-in {
+  from {
+    transform: translateX(-100%); /* 从左边滑入 */
+  }
+  to {
+    transform: translateX(0); /* 最终位置 */
+  }
+}
+
 /* 新增：用于控制二级菜单侧栏的样式 */
 .sub-sidebar {
   position: absolute;
-  left: 88px; /* 根据主侧栏的宽度调整 */
-  top: 0;
-  width: 180px;
-  background-color: #e0e0e0;
+  left: 80px; /* 根据主侧栏的宽度调整 */
+  // top: 0;
+  padding-top: 8px;
+  width: 240px;
+  background-color: #f0f0f0;
   height: 100vh;
-  z-index: 100;
+  z-index: 0;
   border-left: 1px solid #ddd;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  border-radius: 0px 16px 16px 0px;
+  visibility: hidden;
+  opacity: 0;
   transition: all 0.3s ease;
+}
+
+.sub-sidebar[subSidebarVisible] {
+  visibility: visible;
+  opacity: 1;
+  animation: slide-in 0.3s forwards;
 }
 
 /* sub-sidebar 中的导航列表样式 */
@@ -161,15 +182,39 @@ body {
   list-style: none;
   padding: 10px;
   margin: 0;
+  display: flex;
+  flex-direction: column; /* 垂直排列 li 元素 */
+  align-items: stretch; /* 让子元素宽度占满容器 */
 }
 
 .sub-sidebar nav ul li {
-  margin-bottom: 15px;
+  display: block;
+  margin: 0;
+  height: 48px;
+  width: 100%;
 }
 
 .sub-sidebar nav md-text-button {
-  width: 140px;
+  display: block;
+  width: 100%;
+  box-sizing: border-box; /* 确保 padding 不影响宽度 */
   --md-text-button-container-height: 32px;
+  --md-text-button-label-text-color: black;
+  margin-bottom: 10px; /* 调整底部间距，让按钮之间有更多空间 */
+}
+
+.sub-sidebar nav ul li md-text-button a {
+  display: block;
+  width: 100%;
+  padding: 16px 16px; /* 调整上下和左右的内边距，让按钮内部文字和边界有更多空间 */
+  text-align: left;
+  text-decoration: none;
+  color: inherit;
+  box-sizing: border-box;
+}
+
+.sub-sidebar nav ul li:first-child {
+  padding-top: 2px;
 }
 
 .sub-sidebar nav md-icon {
