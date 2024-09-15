@@ -1,6 +1,6 @@
 // Misans
-@import url('https://cdn.jsdelivr.net/npm/misans@4.0.0/lib/Normal/MiSans-Medium.min.css');
-@import url('https://cdn.jsdelivr.net/npm/misans@4.0.0/lib/Normal/MiSans-Bold.min.css');
+@import url("https://cdn.jsdelivr.net/npm/misans@4.0.0/lib/Normal/MiSans-Medium.min.css");
+@import url("https://cdn.jsdelivr.net/npm/misans@4.0.0/lib/Normal/MiSans-Bold.min.css");
 // Icons
 @import url("https://fonts.googleapis.com/icon?family=Material+Symbols+Outlined");
 
@@ -13,7 +13,7 @@
 a {
   color: inherit; /* 使用父元素的文本颜色 */
   text-decoration: none; /* 取消下划线 */
-  font-family: 'MiSans', sans-serif;
+  font-family: "MiSans", sans-serif;
 }
 
 a:visited {
@@ -181,7 +181,6 @@ body {
   visibility: visible;
   opacity: 1;
 }
-
 
 .theme-toggle {
   margin-top: auto;
