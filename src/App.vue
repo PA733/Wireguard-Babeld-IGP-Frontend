@@ -1,30 +1,40 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view />
+  <div class="layout">
+    <aside class="sidebar">
+      <nav>
+        <ul>
+          <li v-for="(item, index) in menuItems" :key="index">
+            <router-link :to="item.path">
+              <md-text-button :class="{ active: isActive(item.path) }">
+                <md-icon>{{ item.icon }}</md-icon>
+              </md-text-button>
+              <a>{{ item.label }}</a>
+            </router-link>
+          </li>
+        </ul>
+      </nav>
+      <div class="theme-toggle">
+        <button>🌙</button>
+      </div>
+    </aside>
+    <router-view />
+  </div>
 </template>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-nav {
-  padding: 30px;
-}
-
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-nav a.router-link-exact-active {
-  color: #42b983;
-}
-</style>
+<script>
+export default {
+  data() {
+    return {
+      menuItems: [
+        { label: "Home", path: "/", icon: "home" },
+        { label: "About", path: "/about", icon: "info" },
+      ],
+    };
+  },
+  methods: {
+    isActive(path) {
+      return this.$route.path === path;
+    },
+  },
+};
+</script>
