@@ -72,6 +72,7 @@ body {
   margin: -2px auto 14px;
   padding: 2px;
   //   margin-bottom: 20px;
+  position: relative; /* 添加 position: relative 用于与 sub-sidebar 的关联 */
 }
 
 .sidebar nav md-outlined-button {
@@ -79,7 +80,8 @@ body {
   --md-outlined-button-container-height: 32px;
 }
 
-.sidebar nav md-text-button {
+.sidebar nav md-text-button,
+.sub-sidebar nav md-text-button {
   width: 56px;
   --md-text-button-container-height: 32px;
 }
@@ -139,6 +141,47 @@ body {
 .sidebar nav ul li a:hover {
   color: #7c4dff;
 }
+
+/* 新增：用于控制二级菜单侧栏的样式 */
+.sub-sidebar {
+  position: absolute;
+  left: 88px; /* 根据主侧栏的宽度调整 */
+  top: 0;
+  width: 180px;
+  background-color: #e0e0e0;
+  height: 100vh;
+  z-index: 100;
+  border-left: 1px solid #ddd;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+/* sub-sidebar 中的导航列表样式 */
+.sub-sidebar nav ul {
+  list-style: none;
+  padding: 10px;
+  margin: 0;
+}
+
+.sub-sidebar nav ul li {
+  margin-bottom: 15px;
+}
+
+.sub-sidebar nav md-text-button {
+  width: 140px;
+  --md-text-button-container-height: 32px;
+}
+
+.sub-sidebar nav md-icon {
+  color: #000;
+}
+
+/* 新增：使 sub-sidebar 在鼠标悬停时显示 */
+.sidebar li:hover + .sub-sidebar {
+  visibility: visible;
+  opacity: 1;
+}
+
 
 .theme-toggle {
   margin-top: auto;
