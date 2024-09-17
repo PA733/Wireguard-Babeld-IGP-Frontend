@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div class="about">
     <div class="content">
       <header class="hero">
         <div class="hero-text">
