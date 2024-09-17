@@ -72,7 +72,7 @@ export default {
           icon: "code",
           subItems: [
             { label: "Develop Overview", path: "/develop" },
-            { label: "Android", path: "/about/mission" },
+            { label: "Android", path: "/develop/mission" },
           ],
         },
         {
