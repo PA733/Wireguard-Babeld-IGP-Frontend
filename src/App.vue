@@ -80,9 +80,9 @@ export default {
           path: "/foundations",
           icon: "foundation",
           subItems: [
-            { label: "Foundations overview", path: "/about/team" },
-            { label: "Accessibility", path: "/about/mission" },
-            { label: "Content design", path: "/about/mission" },
+            { label: "Foundations overview", path: "/foundations/team" },
+            { label: "Accessibility", path: "/foundations/mission" },
+            { label: "Content design", path: "/foundations/mission" },
           ], // 有二级菜单
         },
         {
