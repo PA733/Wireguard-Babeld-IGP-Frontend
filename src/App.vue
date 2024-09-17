@@ -72,7 +72,7 @@ export default {
           icon: "code",
           subItems: [
             { label: "Develop Overview", path: "/develop" },
-            { label: "Android", path: "/develop/mission" },
+            { label: "Android", path: "/develop/android" },
           ],
         },
         {
@@ -80,9 +80,9 @@ export default {
           path: "/foundations",
           icon: "foundation",
           subItems: [
-            { label: "Foundations overview", path: "/foundations/team" },
-            { label: "Accessibility", path: "/foundations/mission" },
-            { label: "Content design", path: "/foundations/mission" },
+            { label: "Foundations overview", path: "/foundations" },
+            { label: "Accessibility", path: "/foundations/accessibility" },
+            { label: "Content design", path: "/foundations/content" },
           ], // 有二级菜单
         },
         {
