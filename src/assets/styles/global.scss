@@ -190,23 +190,33 @@ body {
 .sub-sidebar nav ul li {
   display: block;
   margin: 0;
-  height: 48px;
+  height: auto;
   width: 100%;
 }
 
-.sub-sidebar nav md-text-button {
+.sub-sidebar nav md-text-button.active {
+  background-image: linear-gradient(to right, #dcdaf5 50%, #dcdaf5 50%);
   display: block;
   width: 100%;
   box-sizing: border-box; /* 确保 padding 不影响宽度 */
-  --md-text-button-container-height: 32px;
+  // --md-text-button-container-shape: 32px;
   --md-text-button-label-text-color: black;
-  margin-bottom: 10px; /* 调整底部间距，让按钮之间有更多空间 */
+  // margin-bottom: 10px; /* 调整底部间距，让按钮之间有更多空间 */
+}
+
+.sub-sidebar nav md-text-button:not(.active) {
+  display: block;
+  width: 100%;
+  box-sizing: border-box; /* 确保 padding 不影响宽度 */
+  // --md-text-button-container-shape: 32px;
+  --md-text-button-label-text-color: black;
+  // margin-bottom: 10px; /* 调整底部间距，让按钮之间有更多空间 */
 }
 
 .sub-sidebar nav ul li md-text-button a {
   display: block;
   width: 100%;
-  padding: 16px 16px; /* 调整上下和左右的内边距，让按钮内部文字和边界有更多空间 */
+  padding: 14px 0px; /* 调整上下和左右的内边距，让按钮内部文字和边界有更多空间 */
   text-align: left;
   text-decoration: none;
   color: inherit;
