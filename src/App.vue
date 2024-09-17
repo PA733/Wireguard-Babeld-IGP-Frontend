@@ -10,7 +10,7 @@
             @mouseleave="hideSubmenu"
           >
             <router-link :to="item.path">
-              <md-text-button :class="{ active: isActive(item.path) }">
+              <md-text-button :class="{ active: isActive(item.path, 1) }">
                 <md-icon>{{ item.icon }}</md-icon>
               </md-text-button>
               <a>{{ item.label }}</a>
@@ -37,7 +37,7 @@
             :key="index"
           >
             <router-link :to="subItem.path">
-              <md-text-button :class="{ active: isActive(subItem.path) }">
+              <md-text-button :class="{ active: isActive(subItem.path, 2) }">
                 <a>
                   {{ subItem.label }}
                 </a>
@@ -98,8 +98,19 @@ export default {
     };
   },
   methods: {
-    isActive(path) {
-      return this.$route.path === path;
+    isActive(path, level) {
+      // 将路径拆分为数组，并过滤掉空字符串
+      const pathSegments = path
+        .split("/")
+        .filter((segment) => segment.length > 0)
+        .slice(0, level);
+      const routeSegments = this.$route.path
+        .split("/")
+        .filter((segment) => segment.length > 0)
+        .slice(0, level);
+
+      // 比较截取到指定层级的路径
+      return pathSegments.join("/") === routeSegments.join("/");
     },
     showSubmenu(index) {
       if (this.menuItems[index].subItems.length === 0) {
