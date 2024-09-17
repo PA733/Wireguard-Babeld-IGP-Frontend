@@ -21,6 +21,11 @@ const routes = [
     name: "develop",
     component: () => import("../views/DevelopView.vue"),
   },
+  {
+    path: "/develop/android",
+    name: "develop-android",
+    component: () => import("../views/Develop/DevelopAndroidView.vue"),
+  },
 ];
 
 const router = createRouter({
