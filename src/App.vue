@@ -48,7 +48,10 @@
       </nav>
     </aside>
 
-    <router-view class="content" />
+    <transition name="fade" mode="out-in">
+      <!-- 为 router-view 添加 key 属性，确保 Vue 能够识别路由变化并触发过渡效果 -->
+      <router-view class="content" :key="$route.fullPath" />
+    </transition>
   </div>
 </template>
 
@@ -133,3 +136,22 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+/* .fade-leave-active, */
+.fade-enter-active {
+  transition: all 0.3s ease;
+}
+
+/* 淡出 */
+.fade-leave-to {
+  opacity: 0;
+  transform: translateY(-15px);
+}
+
+/* 淡入 */
+.fade-enter-from {
+  opacity: 0;
+  transform: translateY(15px);
+}
+</style>

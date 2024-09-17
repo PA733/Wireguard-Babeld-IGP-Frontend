@@ -1,5 +1,15 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
+  <div class="home">
+    <div class="content">
+      <header class="hero">
+        <div class="hero-text">
+          <h1>About</h1>
+          <p>
+            Material 3 is the latest version of Google's open-source design
+            system. Design and build beautiful, usable products with Material 3.
+          </p>
+        </div>
+      </header>
+    </div>
   </div>
 </template>
