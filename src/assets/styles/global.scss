@@ -278,7 +278,7 @@ body {
   margin: 10px 0;
 }
 
-.get-started {
+.hero-btn {
   background-color: #7c4dff;
   color: white;
   padding: 10px 20px;
@@ -287,13 +287,17 @@ body {
   cursor: pointer;
 }
 
-.get-started:hover {
+.hero-btn:hover {
   background-color: #651fff;
 }
 
 .hero-image img {
   max-width: 100%;
   border-radius: 12px;
+}
+
+.hero-image md-icon {
+  --md-icon-size: 48px;
 }
 
 .news-launches {
