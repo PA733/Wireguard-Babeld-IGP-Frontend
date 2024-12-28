@@ -26,6 +26,23 @@ const routes = [
     name: "develop-android",
     component: () => import("../views/Develop/DevelopAndroidView.vue"),
   },
+  {
+    path: "/foundations",
+    name: "foundations",
+    component: () => import("../views/FoundationsView.vue"),
+  },
+  {
+    path: "/foundations/accessibility",
+    name: "foundations-accessibility",
+    component: () =>
+      import("../views/Foundations/FoundationsAccessibilityView.vue"),
+  },
+  {
+    path: "/foundations/content-design",
+    name: "foundations-content-design",
+    component: () =>
+      import("../views/Foundations/FoundationsContentDesignView.vue"),
+  },
 ];
 
 const router = createRouter({

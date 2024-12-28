@@ -82,7 +82,7 @@ export default {
           subItems: [
             { label: "Foundations overview", path: "/foundations" },
             { label: "Accessibility", path: "/foundations/accessibility" },
-            { label: "Content design", path: "/foundations/content" },
+            { label: "Content design", path: "/foundations/content-design" },
           ], // 有二级菜单
         },
         {
