@@ -10,10 +10,12 @@
             @mouseleave="hideSubmenu"
           >
             <router-link :to="item.path">
+              <div class="sidebar-item">
               <md-text-button :class="{ active: isActive(item.path, 1) }">
                 <md-icon>{{ item.icon }}</md-icon>
               </md-text-button>
               <a>{{ item.label }}</a>
+              </div>
             </router-link>
           </li>
         </ul>

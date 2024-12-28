@@ -134,6 +134,13 @@ body {
   animation: active-background-collapse 0.2s forwards; /* 动画反向收缩 */
 }
 
+
+.sidebar-item {
+  display: flex;
+  flex-direction: column; /* 使元素垂直排列 */
+  align-items: center; /* 使元素水平居中 */
+}
+
 .sidebar nav ul li a {
   text-align: center;
   font-size: 12px;
