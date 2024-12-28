@@ -67,12 +67,12 @@ export default {
           subItems: [], // 无二级菜单
         },
         {
-          label: "Develop",
-          path: "/develop",
+          label: "Nodes",
+          path: "/nodes",
           icon: "code",
           subItems: [
-            { label: "Develop Overview", path: "/develop" },
-            { label: "Android", path: "/develop/android" },
+            { label: "Nodes Overview", path: "/nodes" },
+            { label: "Android", path: "/nodes/android" },
           ],
         },
         {

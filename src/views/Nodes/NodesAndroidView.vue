@@ -1,5 +1,5 @@
 <template>
-  <div class="develop-android">
+  <div class="nodes-android">
     <div class="content">
       <header class="hero">
         <div class="hero-text">

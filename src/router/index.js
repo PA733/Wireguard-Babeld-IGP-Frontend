@@ -17,14 +17,14 @@ const routes = [
       import(/* webpackChunkName: "about" */ "../views/AboutView.vue"),
   },
   {
-    path: "/develop",
-    name: "develop",
-    component: () => import("../views/DevelopView.vue"),
+    path: "/nodes",
+    name: "nodes",
+    component: () => import("../views/NodesView.vue"),
   },
   {
-    path: "/develop/android",
-    name: "develop-android",
-    component: () => import("../views/Develop/DevelopAndroidView.vue"),
+    path: "/nodes/android",
+    name: "nodes-android",
+    component: () => import("../views/Nodes/NodesAndroidView.vue"),
   },
   {
     path: "/foundations",
