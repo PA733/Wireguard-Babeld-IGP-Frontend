@@ -22,9 +22,9 @@ const routes = [
     component: () => import("../views/NodesView.vue"),
   },
   {
-    path: "/nodes/android",
-    name: "nodes-android",
-    component: () => import("../views/Nodes/NodesAndroidView.vue"),
+    path: "/nodes/detail/:id?",
+    name: "nodes-detail",
+    component: () => import("../views/Nodes/NodeDetailView.vue"),
   },
   {
     path: "/foundations",

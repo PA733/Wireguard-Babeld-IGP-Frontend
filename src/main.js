@@ -7,6 +7,18 @@ import "./assets/styles/global.scss";
 // Material-Web
 import "@material/web/button/outlined-button"; // 未选择时的样式
 import "@material/web/button/text-button"; // 选择时的样式
+import "@material/web/button/filled-tonal-button";
+import "@material/web/button/filled-button";
+import "@material/web/divider/divider";
+import "@material/web/textfield/outlined-text-field";
+import "@material/web/textfield/filled-text-field";
 import "@material/web/icon/icon";
 
-createApp(App).use(router).mount("#app");
+import ElementPlus from "element-plus";
+import "element-plus/dist/index.css"; // 引入样式
+
+const app = createApp(App);
+
+app.use(ElementPlus);
+
+app.use(router).mount("#app");

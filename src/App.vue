@@ -11,10 +11,10 @@
           >
             <router-link :to="item.path">
               <div class="sidebar-item">
-              <md-text-button :class="{ active: isActive(item.path, 1) }">
-                <md-icon>{{ item.icon }}</md-icon>
-              </md-text-button>
-              <a>{{ item.label }}</a>
+                <md-text-button :class="{ active: isActive(item.path, 1) }">
+                  <md-icon>{{ item.icon }}</md-icon>
+                </md-text-button>
+                <a>{{ item.label }}</a>
               </div>
             </router-link>
           </li>
@@ -69,12 +69,12 @@ export default {
           subItems: [], // 无二级菜单
         },
         {
-          label: "Nodes",
+          label: "节点",
           path: "/nodes",
-          icon: "code",
+          icon: "lan",
           subItems: [
-            { label: "Nodes Overview", path: "/nodes" },
-            { label: "Android", path: "/nodes/android" },
+            { label: "节点总览", path: "/nodes" },
+            { label: "单节点详情", path: "/nodes/detail" },
           ],
         },
         {
