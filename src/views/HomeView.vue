@@ -3,27 +3,17 @@
     <div class="content">
       <header class="hero">
         <div class="hero-text">
-          <h1>Material Design</h1>
+          <h1>IGP 管理系统</h1>
           <p>
-            Material 3 is the latest version of Google's open-source design
-            system. Design and build beautiful, usable products with Material 3.
+            IGP 管理系统是一个 Wireguard 和 Babeld
+            的配置文件管理平台，它可以帮助您更方便地管理您的网络设备。
           </p>
-          <button class="hero-btn">Get started</button>
+          <md-filled-tonal-button class="hero-btn"
+            >快速开始</md-filled-tonal-button
+          >
         </div>
-        <div class="hero-image">
-          <img src="abstract-design.png" alt="Abstract Design" />
-        </div>
+        <div class="hero-image"></div>
       </header>
-
-      <section class="news-launches">
-        <h2>News & launches</h2>
-        <div class="news-items">
-          <div class="news-item" style="background-color: #cffccf"></div>
-          <div class="news-item" style="background-color: #ffd6a5"></div>
-          <div class="news-item" style="background-color: #9bf6ff"></div>
-          <div class="news-item" style="background-color: #ffadad"></div>
-        </div>
-      </section>
     </div>
   </div>
 </template>
