@@ -20,9 +20,6 @@
           </li>
         </ul>
       </nav>
-      <div class="theme-toggle">
-        <button>🌙</button>
-      </div>
     </aside>
 
     <!-- 二级菜单 sub-sidebar，增加鼠标进入和离开的事件监听 -->
