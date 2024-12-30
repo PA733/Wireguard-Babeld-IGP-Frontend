@@ -1,6 +1,6 @@
 <template>
   <div class="layout">
-    <aside class="sidebar">
+    <aside class="sidebar" v-if="isLoggedIn">
       <nav>
         <ul>
           <li
@@ -56,8 +56,20 @@
 
 <script>
 export default {
+  computed: {
+    isLoggedIn() {
+      return !!this.jwtToken;
+    },
+  },
+  watch: {
+    $route() {
+      // 路由变化时，更新登录状态
+      this.jwtToken = localStorage.getItem("jwt_token");
+    },
+  },
   data() {
     return {
+      jwtToken: localStorage.getItem("jwt_token"),
       menuItems: [
         {
           label: "主页",
