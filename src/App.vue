@@ -63,7 +63,7 @@ export default {
     return {
       menuItems: [
         {
-          label: "Home",
+          label: "主页",
           path: "/",
           icon: "home",
           subItems: [], // 无二级菜单
