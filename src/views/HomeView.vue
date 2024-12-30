@@ -8,7 +8,9 @@
             IGP 管理系统是一个 Wireguard 和 Babeld
             的配置文件管理平台，它可以帮助您更方便地管理您的网络设备。
           </p>
-          <md-filled-tonal-button class="hero-btn"
+          <md-filled-tonal-button
+            @click="this.$router.push(`/nodes`)"
+            class="hero-btn"
             >快速开始</md-filled-tonal-button
           >
         </div>
